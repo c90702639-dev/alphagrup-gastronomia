@@ -1,8 +1,6 @@
 @import "tailwindcss";
-@import "@fontsource-variable/inter/latin.css";
-@import "@fontsource-variable/inter/latin-ext.css";
-@import "@fontsource-variable/fraunces/latin.css";
-@import "@fontsource-variable/fraunces/latin-ext.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/fraunces";
 
 @theme {
   /* ── Precision Industrial × Warm Craft ─────────────────── */
