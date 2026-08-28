@@ -45,31 +45,14 @@ function cosine(a: Float32Array, b: Float32Array): number {
   return dot;
 }
 
-/* ── query embedding (lazy singleton) ───────────────────────── */
+/* ── query embedding — only available at build time / dev ─────── */
 
-type EmbedFn = (text: string) => Promise<Float32Array>;
-let embedder: Promise<EmbedFn> | null = null;
+// At runtime on Netlify, @huggingface/transformers is excluded from the bundle
+// (too large: 250MB with onnxruntime-node). Query embedding is only used during
+// ingestion scripts. At runtime we fall back to lexical search.
 
-async function getEmbedder(): Promise<EmbedFn> {
-  const { pipeline } = await import("@huggingface/transformers");
-  const pipe = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2", {
-    dtype: "q8",
-  });
-  return async (text: string) => {
-    const out = await pipe(text, { pooling: "mean", normalize: true });
-    return out.data as Float32Array;
-  };
-}
-
-/** Embed a single text — used by retrieval AND the upload endpoint. */
-export async function embedText(text: string): Promise<Float32Array> {
-  if (!embedder)
-    embedder = getEmbedder().catch((e) => {
-      embedder = null;
-      throw e;
-    });
-  const embed = await embedder;
-  return embed(text);
+export async function embedText(_text: string): Promise<Float32Array> {
+  throw new Error("embedText not available at runtime — use lexical search");
 }
 
 /* ── lexical fallback (BM25-lite) ───────────────────────────── */
