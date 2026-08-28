@@ -1,0 +1,35 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import Catalog from "../../react/Catalog";
+import { products, categories, brands, priceFor, finalPrice } from "../../lib/products";
+
+const initialCat = Astro.url.searchParams.get("cat") || undefined;
+
+const items = products.map((p) => {
+  const { base, discountPct } = priceFor(p);
+  return {
+    slug: p.slug,
+    name: p.name,
+    category: p.category,
+    brand: p.brand,
+    specs: p.specs,
+    localImage: p.localImage,
+    base,
+    final: finalPrice(p),
+    discountPct,
+  };
+});
+---
+
+<SiteLayout
+  title="Catálogo Gastronomía"
+  description="Equipos profesionales de cocina: hornos combi, cocinas, freidoras y más. Filtra por marca, voltaje y capacidad."
+>
+  <Catalog
+    client:load
+    products={items}
+    categories={categories}
+    brands={brands}
+    initialCat={initialCat}
+  />
+</SiteLayout>

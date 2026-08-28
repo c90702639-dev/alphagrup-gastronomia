@@ -1,0 +1,23 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PortalNav from "../../components/PortalNav.astro";
+import AiChat from "../../react/AiChat";
+import { isAuthed } from "../../lib/ai/auth";
+import { apiKeys } from "../../lib/ai/config";
+import { kbStats } from "../../lib/ai/retrieval";
+
+export const prerender = false;
+
+if (!isAuthed(Astro.cookies)) return Astro.redirect("/portal");
+
+const stats = await kbStats();
+const ready = { keys: apiKeys().length, chunks: stats.chunks };
+---
+
+<SiteLayout title="Portal · Asistente IA" description="Asistente técnico con IA para el equipo de ventas.">
+  <PortalNav active="ia" subtitle={`${stats.chunks} documentos indexados · modelo: ${stats.model.split("/").pop()}`} />
+
+  <section class="container-x py-6">
+    <AiChat client:only="react" ready={ready} />
+  </section>
+</SiteLayout>

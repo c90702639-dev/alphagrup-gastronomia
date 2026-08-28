@@ -1,0 +1,280 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PortalNav from "../../components/PortalNav.astro";
+import { isAuthed } from "../../lib/ai/auth";
+import { ensureSeeded } from "../../lib/seed";
+import {
+  list,
+} from "../../lib/store";
+import type { Lead } from "../../lib/seed";
+import type { QuoteRecord } from "../api/portal/quotes";
+import { kbStats } from "../../lib/ai/retrieval";
+import { apiKeys } from "../../lib/ai/config";
+
+export const prerender = false;
+
+/* ── auth gate ─────────────────────────────────────────────── */
+const error = Astro.url.searchParams.get("error");
+if (!isAuthed(Astro.cookies)) {
+  // render login view
+}
+const authed = isAuthed(Astro.cookies);
+
+let kpis = { leads: 0, nuevos: 0, valorMes: 0, iaConsultas: 0 };
+let leadsPorEstado: Record<string, number> = {};
+let porDia: { dia: string; total: number; count: number }[] = [];
+let topProductos: { name: string; qty: number }[] = [];
+let actividad: { id: string; ts: number; tipo: string; texto: string; demo?: boolean }[] = [];
+let aiStatus = { keys: 0, chunks: 0 };
+
+if (authed) {
+  await ensureSeeded();
+
+  const leads = await list<Lead>("leads");
+  const quotes = await list<QuoteRecord>("quotes");
+  actividad = (await list<{ id: string; ts: number; tipo: string; texto: string; demo?: boolean }>("activity"))
+    .sort((a, b) => b.ts - a.ts)
+    .slice(0, 8);
+  const stats = await kbStats();
+  aiStatus = { keys: apiKeys().length, chunks: stats.chunks };
+
+  const now = Date.now();
+  const DAY = 86_400_000;
+  const mesAtras = now - 30 * DAY;
+
+  kpis = {
+    leads: leads.length,
+    nuevos: leads.filter((l) => l.estado === "nuevo").length,
+    valorMes: Math.round(
+      [...leads, ...quotes.map((q) => ({ fecha: q.fecha, total: q.total }))]
+        .filter((x) => (x as any).fecha > mesAtras)
+        .reduce((n, x) => n + x.total, 0),
+    ),
+    iaConsultas: 0, // client-side merges localStorage stats on mount
+  };
+
+  for (const l of leads) leadsPorEstado[l.estado] = (leadsPorEstado[l.estado] || 0) + 1;
+
+  /* last 14 days */
+  for (let d = 13; d >= 0; d--) {
+    const start = now - (d + 1) * DAY + DAY / 2;
+    const end = start + DAY;
+    const delDia = [...leads, ...quotes].filter((x: any) => x.fecha >= start && x.fecha < end);
+    porDia.push({
+      dia: new Date(end).toLocaleDateString("es-MX", { day: "2-digit", month: "short" }),
+      total: delDia.reduce((n, x: any) => n + (x.total || 0), 0),
+      count: delDia.length,
+    });
+  }
+
+  /* top products by requested qty across leads */
+  const acc = new Map<string, number>();
+  for (const l of leads)
+    for (const it of l.items) acc.set(it.name, (acc.get(it.name) || 0) + it.qty);
+  topProductos = [...acc.entries()]
+    .map(([name, qty]) => ({ name, qty }))
+    .sort((a, b) => b.qty - a.qty)
+    .slice(0, 5);
+
+  /* merge AI usage from localStorage client-side via inline script */
+}
+
+const money = (n: number) =>
+  new Intl.NumberFormat("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 }).format(n);
+
+const maxDia = Math.max(1, ...porDia.map((d) => d.total));
+const estadoColors: Record<string, string> = {
+  nuevo: "bg-cobre text-white",
+  contactado: "bg-tinta text-papel",
+  cotizada: "bg-acero-2 text-tinta",
+  ganado: "bg-exito text-white",
+  perdido: "bg-alerta text-white",
+};
+const tipoIcon: Record<string, string> = {
+  lead: "📥", quote: "📄", win: "🏆", ia: "🤖", doc: "📄",
+};
+---
+
+<SiteLayout title="Portal de ventas" description="Panel de ventas Grupo Alpha.">
+  {
+    !authed ? (
+      <section class="container-x grid min-h-[70vh] place-items-center py-16">
+        <div class="w-full max-w-sm border border-linea bg-white p-8">
+          <div class="text-center">
+            <span class="mx-auto grid size-11 place-items-center bg-tinta font-display text-xl font-bold text-papel">α</span>
+            <h1 class="mt-4 font-display text-2xl font-semibold">Portal de ventas</h1>
+            <p class="mt-2 text-sm text-tinta-3">Acceso exclusivo para vendedores Grupo Alpha.</p>
+          </div>
+
+          {error && (
+            <p class="mt-5 border border-alerta bg-alerta/10 px-3 py-2 text-center text-sm text-alerta">
+              Contraseña incorrecta
+            </p>
+          )}
+
+          <form method="POST" action="/api/portal-login" class="mt-6 space-y-4">
+            <label class="block text-sm font-medium">
+              Contraseña
+              <input required type="password" name="password" autofocus class="mt-1.5 w-full border border-linea px-3.5 py-2.5 focus:border-cobre focus:outline-none" />
+            </label>
+            <button class="btn btn-primary w-full py-3">Entrar</button>
+          </form>
+          <p class="mt-5 text-center text-xs text-tinta-3">Dashboard · Asistente IA · Leads · Cotizador · Documentos</p>
+        </div>
+      </section>
+    ) : (
+      <>
+        <PortalNav active="inicio" subtitle={`Bienvenido — ${new Date().toLocaleDateString("es-MX", { weekday: "long", day: "numeric", month: "long" })}`} />
+
+        <section class="container-x py-8">
+          {/* KPIs */}
+          <div class="grid grid-cols-2 gap-px overflow-hidden border border-linea bg-linea lg:grid-cols-4">
+            <div class="bg-white p-6">
+              <p class="eyebrow !text-tinta-3">Leads totales</p>
+              <p class="mt-2 font-display text-4xl font-semibold">{kpis.leads}</p>
+              <p class="mt-1 text-xs text-cobre font-semibold">{kpis.nuevos} sin contactar</p>
+            </div>
+            <div class="bg-white p-6">
+              <p class="eyebrow !text-tinta-3">Valor cotizado (30d)</p>
+              <p class="mt-2 font-display text-3xl font-semibold">{money(kpis.valorMes)}</p>
+              <p class="mt-1 text-xs text-tinta-3">MXN estimado</p>
+            </div>
+            <div class="bg-white p-6" id="kpi-ia">
+              <p class="eyebrow !text-tinta-3">Consultas IA</p>
+              <p class="mt-2 font-display text-4xl font-semibold" id="kpi-ia-num">—</p>
+              <p class="mt-1 text-xs text-tinta-3">en este navegador</p>
+            </div>
+            <div class="bg-white p-6">
+              <p class="eyebrow !text-tinta-3">Documentos IA</p>
+              <p class="mt-2 font-display text-4xl font-semibold">{aiStatus.chunks}</p>
+              <p class="mt-1 text-xs text-tinta-3">fragmentos indexados</p>
+            </div>
+          </div>
+
+          {/* Charts row */}
+          <div class="mt-6 grid gap-6 lg:grid-cols-[1.7fr_1fr]">
+            <div class="border border-linea bg-white p-6">
+              <h2 class="font-display text-xl font-semibold">Cotizaciones — últimos 14 días</h2>
+              <svg viewBox="0 0 560 180" class="mt-4 w-full" role="img" aria-label="Cotizaciones por día">
+                {
+                  porDia.map((d, i) => {
+                    const h = Math.max(3, Math.round((d.total / maxDia) * 130));
+                    const x = i * 40 + 10;
+                    return (
+                      <g>
+                        <rect x={x} y={150 - h} width={26} height={h} fill={d.count ? "#b4642d" : "#e7e0d8"} rx="2">
+                          <title>{`${d.dia}: ${money(d.total)} (${d.count})`}</title>
+                        </rect>
+                        {i % 2 === 0 && (
+                          <text x={x + 13} y={168} text-anchor="middle" font-size="9" fill="#78716c">
+                            {d.dia.split(" ")[0]}
+                          </text>
+                        )}
+                      </g>
+                    );
+                  })
+                }
+                <line x1="0" y1="150.5" x2="560" y2="150.5" stroke="#ddd4c8"></line>
+              </svg>
+            </div>
+
+            <div class="border border-linea bg-white p-6">
+              <h2 class="font-display text-xl font-semibold">Leads por estado</h2>
+              <ul class="mt-4 space-y-3">
+                {
+                  ["nuevo", "contactado", "cotizada", "ganado", "perdido"].map((est) => {
+                    const n = leadsPorEstado[est] || 0;
+                    const pct = kpis.leads ? Math.round((n / kpis.leads) * 100) : 0;
+                    return (
+                      <li>
+                        <div class="flex justify-between text-sm">
+                          <span class="capitalize">{est}</span>
+                          <span class="text-tinta-3">{n}</span>
+                        </div>
+                        <div class="mt-1 h-2 bg-papel-2">
+                          <div class={`h-full ${estadoColors[est]}`} style={`width:${pct}%`} />
+                        </div>
+                      </li>
+                    );
+                  })
+                }
+              </ul>
+              <a href="/portal/leads" class="btn btn-outline mt-5 w-full !py-2 text-sm">Ver leads →</a>
+            </div>
+          </div>
+
+          {/* Activity + AI status */}
+          <div class="mt-6 grid gap-6 lg:grid-cols-[1.7fr_1fr]">
+            <div class="border border-linea bg-white">
+              <h2 class="border-b border-linea px-6 py-4 font-display text-xl font-semibold">Actividad reciente</h2>
+              <ul class="divide-y divide-linea">
+                {
+                  actividad.length === 0 && (
+                    <li class="px-6 py-8 text-center text-sm text-tinta-3">Sin actividad todavía.</li>
+                  )
+                }
+                {
+                  actividad.map((a) => (
+                    <li class="flex items-start gap-3 px-6 py-3.5 text-sm">
+                      <span>{tipoIcon[a.tipo] || "•"}</span>
+                      <div class="flex-1">
+                        <p>{a.texto}</p>
+                        <p class="mt-0.5 text-xs text-tinta-3">
+                          {new Date(a.ts).toLocaleString("es-MX")}
+                          {a.demo && <span class="ml-2 italic text-acero-2">demo</span>}
+                        </p>
+                      </div>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <div class="space-y-6">
+              <div id="ai-status-card" class="border border-linea bg-white p-6" data-keys={aiStatus.keys}>
+                <h2 class="font-display text-xl font-semibold">Estado de la IA</h2>
+                <p class="mt-2 text-sm text-tinta-2">
+                  <span id="ai-dot" class={aiStatus.keys ? "text-exito" : "text-alerta"}>●</span>{" "}
+                  <span id="ai-text">{aiStatus.keys ? `${aiStatus.keys} key(s) configurada(s)` : "Sin keys — configura OPENROUTER_KEYS"}</span>
+                </p>
+                <button id="btn-test-ai" class="btn btn-primary mt-4 w-full !py-2.5 text-sm">
+                  Probar conexión
+                </button>
+                <pre id="ai-test-result" hidden class="mt-3 overflow-x-auto bg-papel-2 p-3 text-xs leading-relaxed"></pre>
+              </div>
+
+              <div class="border border-linea bg-white p-6">
+                <h2 class="font-display text-xl font-semibold">Equipos más solicitados</h2>
+                <ol class="mt-4 space-y-2.5 text-sm">
+                  {
+                    topProductos.length === 0 ? (
+                      <li class="text-tinta-3">Sin datos aún.</li>
+                    ) : (
+                      topProductos.map((p, i) => (
+                        <li class="flex items-baseline justify-between gap-3 border-b border-linea pb-2">
+                          <span class="truncate">
+                            <span class="mr-2 font-display font-semibold text-cobre">{i + 1}.</span>
+                            {p.name}
+                          </span>
+                          <span class="shrink-0 font-semibold">{p.qty}×</span>
+                        </li>
+                      ))
+                    )
+                  }
+                </ol>
+              </div>
+
+              <button id="btn-purge-demo" class="w-full border border-dashed border-acero-2 px-4 py-2.5 text-xs font-medium text-tinta-3 transition-colors hover:border-alerta hover:text-alerta">
+                Eliminar datos de demostración
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <script>
+          import "/src/scripts/portal-home.ts";
+        </script>
+      </>
+    )
+  }
+</SiteLayout>

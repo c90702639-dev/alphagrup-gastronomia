@@ -1,0 +1,30 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PortalNav from "../../components/PortalNav.astro";
+import QuoteBuilder from "../../react/QuoteBuilder";
+import { isAuthed } from "../../lib/ai/auth";
+import { products, priceFor } from "../../lib/products";
+
+export const prerender = false;
+if (!isAuthed(Astro.cookies)) return Astro.redirect("/portal");
+
+const leadId = Astro.url.searchParams.get("lead") || undefined;
+
+const items = products.map((p) => ({
+  slug: p.slug,
+  name: p.name,
+  brand: p.brand,
+  price: priceFor(p).base,
+}));
+---
+
+<SiteLayout title="Cotizador — Portal de ventas" description="Constructor de cotizaciones con descuentos.">
+  <PortalNav active="cotizador" subtitle="Nueva cotización" />
+  <section class="container-x py-8">
+    <p class="eyebrow">Ventas</p>
+    <h1 class="mt-1 font-display text-3xl font-semibold">Cotizador</h1>
+    <div class="mt-6">
+      <QuoteBuilder client:only="react" products={items} prefill={{ leadId }} />
+    </div>
+  </section>
+</SiteLayout>

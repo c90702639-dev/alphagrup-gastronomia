@@ -1,0 +1,16 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PortalNav from "../../components/PortalNav.astro";
+import UsageDashboard from "../../react/UsageDashboard";
+import { isAuthed } from "../../lib/ai/auth";
+
+export const prerender = false;
+if (!isAuthed(Astro.cookies)) return Astro.redirect("/portal");
+---
+
+<SiteLayout title="Portal · Uso de IA" description="Dashboard de uso del asistente IA.">
+  <PortalNav active="uso" subtitle="Métricas del asistente IA" />
+  <section class="container-x py-10">
+    <UsageDashboard client:only="react" />
+  </section>
+</SiteLayout>

@@ -1,0 +1,20 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Comparar from "../react/Comparar";
+import { products, finalPrice, priceFor } from "../lib/products";
+
+const all = products.map((p) => ({
+  slug: p.slug,
+  name: p.name,
+  brand: p.brand,
+  category: p.category,
+  specs: p.specs,
+  localImage: p.localImage,
+  final: finalPrice(p),
+  discountPct: priceFor(p).discountPct,
+}));
+---
+
+<SiteLayout title="Comparar equipos" description="Compara especificaciones técnicas de hasta 4 equipos lado a lado.">
+  <Comparar client:load all={all} />
+</SiteLayout>

@@ -1,0 +1,59 @@
+---
+import type { Product } from "../lib/products";
+import { priceFor, finalPrice, formatMXN } from "../lib/products";
+
+interface Props {
+  product: Product;
+}
+const { product: p } = Astro.props;
+const { base, discountPct } = priceFor(p);
+const img = p.localImage || p.images[0];
+---
+
+<article class="card group relative flex flex-col">
+  {
+    discountPct > 0 && (
+      <span class="absolute top-3 left-3 z-10 bg-terracota px-2 py-1 text-[0.7rem] font-bold tracking-wide text-white">
+        −{discountPct}%
+      </span>
+    )
+  }
+  <a href={`/productos/${p.slug}/`} class="block overflow-hidden bg-papel-2">
+    {
+      img ? (
+        <img
+          src={img}
+          alt={p.name}
+          width="400"
+          height="300"
+          loading="lazy"
+          decoding="async"
+          class="aspect-[4/3] w-full object-contain p-4 transition-transform duration-300 group-hover:scale-[1.03]"
+        />
+      ) : (
+        <div class="grid aspect-[4/3] place-items-center text-tinta-3">Sin imagen</div>
+      )
+    }
+  </a>
+
+  <div class="flex flex-1 flex-col border-t border-linea p-4">
+    <p class="text-[0.7rem] font-semibold uppercase tracking-wider text-tinta-3">
+      {p.brand} · {p.category}
+    </p>
+    <h3 class="mt-1 line-clamp-2 leading-snug">
+      <a href={`/productos/${p.slug}/`} class="hover:text-cobre">{p.name}</a>
+    </h3>
+
+    <div class="mt-auto pt-3">
+      {
+        discountPct > 0 && (
+          <span class="mr-2 text-sm text-tinta-3 line-through">{formatMXN(base)}</span>
+        )
+      }
+      <span class="font-display text-lg font-semibold text-cobre">
+        {formatMXN(finalPrice(p))}
+      </span>
+      <p class="mt-0.5 text-xs text-tinta-3">MXN · precio sugerido</p>
+    </div>
+  </div>
+</article>

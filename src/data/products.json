@@ -1,0 +1,1097 @@
+{
+  "scrapedAt": "2026-08-26T05:49:12.934Z",
+  "division": "Gastronomía",
+  "categories": [
+    "Cocción",
+    "Freidora",
+    "Hornos Combinados",
+    "Mantenedores",
+    "Marmita",
+    "Microondas",
+    "Sartén Basculante"
+  ],
+  "brands": [
+    "Rational",
+    "Cook Rite",
+    "Alpha"
+  ],
+  "products": [
+    {
+      "id": "icombi-pro-11",
+      "slug": "icombi-pro-11",
+      "name": "iCOMBI PRO",
+      "division": "Gastronomía",
+      "category": "Hornos Combinados",
+      "brand": "Rational",
+      "specs": {
+        "Capacidad": "6 Charolas 2/3 GN",
+        "Dimensiones Adicionales": "6.8 cm entre bandejas",
+        "Peso (Kg)": "67",
+        "Peso Bruto (Kg)": "76",
+        "Fases": "3F+Tierra",
+        "Consumo": "5.3 kW/20 A",
+        "Voltaje": "220 V",
+        "Potencia": "5.3 kW/7 Hp",
+        "Amperaje": "20 A"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ERATI0014420.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/gastronomia/icombi-pro-11/",
+      "localImage": "/productos/icombi-pro-11.webp"
+    },
+    {
+      "id": "icombi-pro-12",
+      "slug": "icombi-pro-12",
+      "name": "iCOMBI PRO",
+      "division": "Gastronomía",
+      "category": "Hornos Combinados",
+      "brand": "Rational",
+      "specs": {
+        "Capacidad": "10 Charolas 1/1 GN",
+        "Dimensiones Adicionales": "6.8 cm entre bandejas",
+        "Peso (Kg)": "155",
+        "Peso Bruto (Kg)": "175",
+        "Fases": "1F+N",
+        "Consumo": "0.9 kW/16 A",
+        "Voltaje": "220 V",
+        "Potencia": "0.9 kW/1.2 Hp",
+        "Amperaje": "16 A"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ERATI00141.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/gastronomia/icombi-pro-12/",
+      "localImage": "/productos/icombi-pro-12.webp"
+    },
+    {
+      "id": "icombi-pro-13",
+      "slug": "icombi-pro-13",
+      "name": "iCOMBI PRO",
+      "division": "Gastronomía",
+      "category": "Hornos Combinados",
+      "brand": "Rational",
+      "specs": {
+        "Capacidad": "10 Charolas 2/1 GN",
+        "Dimensiones Adicionales": "6.8 cm entre bandejas",
+        "Peso (Kg)": "192",
+        "Peso Bruto (Kg)": "219",
+        "Fases": "2F",
+        "Consumo": "1.5 kW/16 A",
+        "Voltaje": "220 V",
+        "Potencia": "1.5 kW/2 Hp",
+        "Amperaje": "16 A"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ERATI00149.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/gastronomia/icombi-pro-13/",
+      "localImage": "/productos/icombi-pro-13.webp"
+    },
+    {
+      "id": "icombi-pro-icaresystem-3",
+      "slug": "icombi-pro-icaresystem-3",
+      "name": "iCOMBI PRO iCARESYSTEM",
+      "division": "Gastronomía",
+      "category": "Hornos Combinados",
+      "brand": "Rational",
+      "specs": {
+        "Capacidad": "6 Charolas 1/1 GN",
+        "Dimensiones Adicionales": "6.8 cm entre bandejas",
+        "Peso (Kg)": "117",
+        "Peso Bruto (Kg)": "135",
+        "Fases": "1F+N+Tierra",
+        "Consumo": "0.6 kW/16 A",
+        "Voltaje": "120 V",
+        "Potencia": "0.6 kW/4/5 Hp",
+        "Amperaje": "16 A"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ERATI00239.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/gastronomia/icombi-pro-icaresystem-3/",
+      "localImage": "/productos/icombi-pro-icaresystem-3.webp"
+    },
+    {
+      "id": "icombi-pro-icaresystem-4",
+      "slug": "icombi-pro-icaresystem-4",
+      "name": "iCOMBI PRO iCARESYSTEM",
+      "division": "Gastronomía",
+      "category": "Hornos Combinados",
+      "brand": "Rational",
+      "specs": {
+        "Capacidad": "10 Charolas 1/1 GN",
+        "Dimensiones Adicionales": "6.8 cm entre bandejas",
+        "Peso (Kg)": "155",
+        "Peso Bruto (Kg)": "175",
+        "Fases": "1F+N",
+        "Consumo": "0.9 kW/16 A",
+        "Voltaje": "220 V",
+        "Potencia": "0.9 kW/1.2 Hp",
+        "Amperaje": "16 A"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ERATI00241.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/gastronomia/icombi-pro-icaresystem-4/",
+      "localImage": "/productos/icombi-pro-icaresystem-4.webp"
+    },
+    {
+      "id": "ivario-pro-4",
+      "slug": "ivario-pro-4",
+      "name": "iVARIO PRO",
+      "division": "Gastronomía",
+      "category": "Hornos Combinados",
+      "brand": "Rational",
+      "specs": {
+        "Capacidad": "100 Lt / 39 dm²",
+        "Peso (Kg)": "235",
+        "Peso Bruto (Kg)": "267",
+        "Fases": "3F",
+        "Consumo": "25 kW/80 A",
+        "Voltaje": "220 V",
+        "Potencia": "25 kW/33.5 Hp",
+        "Amperaje": "80 A"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ERATI00222.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/gastronomia/ivario-pro-4/",
+      "localImage": "/productos/ivario-pro-4.webp"
+    },
+    {
+      "id": "ivario-pro-5",
+      "slug": "ivario-pro-5",
+      "name": "iVARIO PRO",
+      "division": "Gastronomía",
+      "category": "Hornos Combinados",
+      "brand": "Rational",
+      "specs": {
+        "Capacidad": "150 Lt/59 dm²",
+        "Peso (Kg)": "283",
+        "Peso Bruto (Kg)": "326",
+        "Fases": "3F",
+        "Consumo": "38 kW/100 A",
+        "Voltaje": "220 V",
+        "Potencia": "38 kW/50 Hp",
+        "Amperaje": "100 A"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ERATI00213.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/gastronomia/ivario-pro-5/",
+      "localImage": "/productos/ivario-pro-5.webp"
+    },
+    {
+      "id": "fogon-sencillo-2-quemadores",
+      "slug": "fogon-sencillo-2-quemadores",
+      "name": "FOGÓN SENCILLO 2 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "48",
+        "Peso Bruto (Kg)": "54",
+        "Potencia": "80,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATSP-18-1.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/fogon-sencillo-2-quemadores/",
+      "localImage": "/productos/fogon-sencillo-2-quemadores.webp"
+    },
+    {
+      "id": "plancha-24-2-quemadores",
+      "slug": "plancha-24-2-quemadores",
+      "name": "PLANCHA 24″ 2 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "73",
+        "Peso Bruto (Kg)": "89",
+        "Potencia": "60,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATMG-24.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/plancha-24-2-quemadores/",
+      "localImage": "/productos/plancha-24-2-quemadores.webp"
+    },
+    {
+      "id": "plancha-36-3-quemadores",
+      "slug": "plancha-36-3-quemadores",
+      "name": "PLANCHA 36″ 3 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "104",
+        "Peso Bruto (Kg)": "128",
+        "Potencia": "90,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATMG-36.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/plancha-36-3-quemadores/",
+      "localImage": "/productos/plancha-36-3-quemadores.webp"
+    },
+    {
+      "id": "plancha-48-4-quemadores",
+      "slug": "plancha-48-4-quemadores",
+      "name": "PLANCHA 48″ 4 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "133",
+        "Peso Bruto (Kg)": "188",
+        "Potencia": "120,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATMG-48.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/plancha-48-4-quemadores/",
+      "localImage": "/productos/plancha-48-4-quemadores.webp"
+    },
+    {
+      "id": "asador-radiante-24-2-quemadores",
+      "slug": "asador-radiante-24-2-quemadores",
+      "name": "ASADOR RADIANTE 24″ 2 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "53",
+        "Peso Bruto (Kg)": "67",
+        "Potencia": "70,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATRC-24.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/asador-radiante-24-2-quemadores/",
+      "localImage": "/productos/asador-radiante-24-2-quemadores.webp"
+    },
+    {
+      "id": "asador-radiante-36-3-quemadores",
+      "slug": "asador-radiante-36-3-quemadores",
+      "name": "ASADOR RADIANTE 36″ 3 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "72",
+        "Peso Bruto (Kg)": "93",
+        "Potencia": "105,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATRC-36.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/asador-radiante-36-3-quemadores/",
+      "localImage": "/productos/asador-radiante-36-3-quemadores.webp"
+    },
+    {
+      "id": "asador-radiante-48-4-quemadores",
+      "slug": "asador-radiante-48-4-quemadores",
+      "name": "ASADOR RADIANTE 48″ 4 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "91",
+        "Peso Bruto (Kg)": "116",
+        "Potencia": "140,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATRC-48.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/asador-radiante-48-4-quemadores/",
+      "localImage": "/productos/asador-radiante-48-4-quemadores.webp"
+    },
+    {
+      "id": "asador-de-piedra-24-2-quemadores",
+      "slug": "asador-de-piedra-24-2-quemadores",
+      "name": "ASADOR DE PIEDRA 24″ 2 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "62",
+        "Peso Bruto (Kg)": "76",
+        "Potencia": "70,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATCB-24.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/asador-de-piedra-24-2-quemadores/",
+      "localImage": "/productos/asador-de-piedra-24-2-quemadores.webp"
+    },
+    {
+      "id": "asador-de-piedra-36-3-quemadores",
+      "slug": "asador-de-piedra-36-3-quemadores",
+      "name": "ASADOR DE PIEDRA 36″ 3 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "87",
+        "Peso Bruto (Kg)": "108",
+        "Potencia": "105,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATCB-36.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/asador-de-piedra-36-3-quemadores/",
+      "localImage": "/productos/asador-de-piedra-36-3-quemadores.webp"
+    },
+    {
+      "id": "asador-de-piedra-48-4-quemadores",
+      "slug": "asador-de-piedra-48-4-quemadores",
+      "name": "ASADOR DE PIEDRA 48″ 4 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "113",
+        "Peso Bruto (Kg)": "142",
+        "Potencia": "140,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATCB-48.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/asador-de-piedra-48-4-quemadores/",
+      "localImage": "/productos/asador-de-piedra-48-4-quemadores.webp"
+    },
+    {
+      "id": "parrilla-2-quemadores",
+      "slug": "parrilla-2-quemadores",
+      "name": "PARRILLA 2 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "25",
+        "Peso Bruto (Kg)": "34",
+        "Potencia": "64,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ACHP-2.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/parrilla-2-quemadores/",
+      "localImage": "/productos/parrilla-2-quemadores.webp"
+    },
+    {
+      "id": "parrilla-4-quemadores",
+      "slug": "parrilla-4-quemadores",
+      "name": "PARRILLA 4 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "43",
+        "Peso Bruto (Kg)": "57",
+        "Potencia": "128,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ACHP-4.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/parrilla-4-quemadores/",
+      "localImage": "/productos/parrilla-4-quemadores.webp"
+    },
+    {
+      "id": "parrilla-6-quemadores",
+      "slug": "parrilla-6-quemadores",
+      "name": "PARRILLA 6 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "61",
+        "Peso Bruto (Kg)": "82",
+        "Potencia": "192,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ACHP-6.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/parrilla-6-quemadores/",
+      "localImage": "/productos/parrilla-6-quemadores.webp"
+    },
+    {
+      "id": "estacion-wok",
+      "slug": "estacion-wok",
+      "name": "ESTACIÓN WOK",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "35",
+        "Peso Bruto (Kg)": "42",
+        "Potencia": "95,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATW-13.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/estacion-wok/",
+      "localImage": "/productos/estacion-wok.webp"
+    },
+    {
+      "id": "freidora-18-lt",
+      "slug": "freidora-18-lt",
+      "name": "FREIDORA 18 Lt",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Capacidad": "18 Lt",
+        "Peso (Kg)": "60",
+        "Peso Bruto (Kg)": "73",
+        "Potencia": "90,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATFS-40.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/freidora-18-lt/",
+      "localImage": "/productos/freidora-18-lt.webp"
+    },
+    {
+      "id": "freidora-23-lt",
+      "slug": "freidora-23-lt",
+      "name": "FREIDORA 23 Lt",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Capacidad": "23 Lt",
+        "Peso (Kg)": "65",
+        "Peso Bruto (Kg)": "78",
+        "Potencia": "120,00 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATFS-50.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/freidora-23-lt/",
+      "localImage": "/productos/freidora-23-lt.webp"
+    },
+    {
+      "id": "freidora-34-lt",
+      "slug": "freidora-34-lt",
+      "name": "FREIDORA 34 Lt",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Capacidad": "34 Lt",
+        "Peso (Kg)": "76",
+        "Peso Bruto (Kg)": "91",
+        "Potencia": "150,000 BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATFS-75.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/freidora-34-lt/",
+      "localImage": "/productos/freidora-34-lt.webp"
+    },
+    {
+      "id": "estufa-c-horno-4-quemadores",
+      "slug": "estufa-c-horno-4-quemadores",
+      "name": "ESTUFA C/HORNO 4 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "148",
+        "Peso Bruto (Kg)": "194",
+        "Potencia": "128,000 Quemadores/24,000 Horno BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/AGR-4B.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/estufa-c-horno-4-quemadores/",
+      "localImage": "/productos/estufa-c-horno-4-quemadores.webp"
+    },
+    {
+      "id": "estufa-c-horno-6-quemadores",
+      "slug": "estufa-c-horno-6-quemadores",
+      "name": "ESTUFA C/HORNO 6 QUEMADORES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "200",
+        "Peso Bruto (Kg)": "258",
+        "Potencia": "192,000 Quemadores/27,000 Horno BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/AGR-6B.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/estufa-c-horno-6-quemadores/",
+      "localImage": "/productos/estufa-c-horno-6-quemadores.webp"
+    },
+    {
+      "id": "estufa-2-quemadores-plancha-24-c-horno",
+      "slug": "estufa-2-quemadores-plancha-24-c-horno",
+      "name": "ESTUFA 2 QUEMADORES PLANCHA 24″ C/HORNO",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "217",
+        "Peso Bruto (Kg)": "275",
+        "Potencia": "46,000 Quemadores/48,000 Plancha/27,000 Horno BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/AGR-2B24GR-36.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/estufa-2-quemadores-plancha-24-c-horno/",
+      "localImage": "/productos/estufa-2-quemadores-plancha-24-c-horno.webp"
+    },
+    {
+      "id": "estufa-6-quemadores-plancha-24-izq-horno",
+      "slug": "estufa-6-quemadores-plancha-24-izq-horno",
+      "name": "ESTUFA 6 QUEMADORES PLANCHA 24″ IZQ HORNO",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "352",
+        "Peso Bruto (Kg)": "427",
+        "Potencia": "138,000 Quemadores/48,000 Horno/54,000 Horno BTU/hr"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/AGR-24G6B.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/estufa-6-quemadores-plancha-24-izq-horno/",
+      "localImage": "/productos/estufa-6-quemadores-plancha-24-izq-horno.webp"
+    },
+    {
+      "id": "salamandra-de-posiciones",
+      "slug": "salamandra-de-posiciones",
+      "name": "SALAMANDRA DE POSICIONES",
+      "division": "Cocción",
+      "category": "Cocción",
+      "brand": "Cook Rite",
+      "specs": {
+        "Peso (Kg)": "65",
+        "Peso Bruto (Kg)": "77"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATSB-36.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/coccion/salamandra-de-posiciones/",
+      "localImage": "/productos/salamandra-de-posiciones.webp"
+    },
+    {
+      "id": "gabinete-mantenedor-9-charolas",
+      "slug": "gabinete-mantenedor-9-charolas",
+      "name": "GABINETE MANTENEDOR 9 CHAROLAS",
+      "division": "Cook Rite",
+      "category": "Mantenedores",
+      "brand": "Alpha",
+      "specs": {
+        "Capacidad": "9 Charolas 0.45 x 0.65 m",
+        "Peso Bruto (Kg)": "76",
+        "Fases": "1F",
+        "Consumo": "2 kW/16.6 A",
+        "Voltaje": "120 V",
+        "Potencia": "2 kW/2.7 Hp",
+        "Amperaje": "16.6 A",
+        "Temperatura": "32 - 104 °C"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATHC-9-P.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/cook-rite/gabinete-mantenedor-9-charolas/",
+      "localImage": "/productos/gabinete-mantenedor-9-charolas.webp"
+    },
+    {
+      "id": "gabinete-mantenedor-18-charolas",
+      "slug": "gabinete-mantenedor-18-charolas",
+      "name": "GABINETE MANTENEDOR 18 CHAROLAS",
+      "division": "Cook Rite",
+      "category": "Mantenedores",
+      "brand": "Alpha",
+      "specs": {
+        "Capacidad": "18 Charolas 0.45 x 0.65 m",
+        "Peso Bruto (Kg)": "96",
+        "Fases": "1F",
+        "Consumo": "2 kW/16.6 A",
+        "Voltaje": "120 V",
+        "Potencia": "2 kW/2.7 Hp",
+        "Amperaje": "16.6 A",
+        "Temperatura": "32 - 104 °C"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/ATHC-18-P.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/cook-rite/gabinete-mantenedor-18-charolas/",
+      "localImage": "/productos/gabinete-mantenedor-18-charolas.webp"
+    },
+    {
+      "id": "vitrina-caliente-sobre-mostrador",
+      "slug": "vitrina-caliente-sobre-mostrador",
+      "name": "VITRINA CALIENTE SOBRE MOSTRADOR",
+      "division": "Cook Rite",
+      "category": "Mantenedores",
+      "brand": "Alpha",
+      "specs": {
+        "Capacidad": "5.3 Ft³",
+        "Peso (Kg)": "46",
+        "Peso Bruto (Kg)": "61",
+        "Fases": "1F",
+        "Consumo": "1.25 kW/10.5 A",
+        "Voltaje": "115 V",
+        "Potencia": "1.25 kW/1.6 Hp",
+        "Amperaje": "10.5 A",
+        "Temperatura": "30 - 90 °C",
+        "Incluye": "3 Estantes, 2 Puertas"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/CHDS-53.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/cook-rite/vitrina-caliente-sobre-mostrador/",
+      "localImage": "/productos/vitrina-caliente-sobre-mostrador.webp"
+    },
+    {
+      "id": "vitrina-caliente-sobre-mostrador-2",
+      "slug": "vitrina-caliente-sobre-mostrador-2",
+      "name": "VITRINA CALIENTE SOBRE MOSTRADOR",
+      "division": "Cook Rite",
+      "category": "Mantenedores",
+      "brand": "Alpha",
+      "specs": {
+        "Capacidad": "4.4 Ft³",
+        "Peso (Kg)": "43",
+        "Peso Bruto (Kg)": "58",
+        "Fases": "1F",
+        "Consumo": "1.20 kW/10.5 A",
+        "Voltaje": "115 V",
+        "Potencia": "1.20 kW/1.6 Hp",
+        "Amperaje": "10.5 A",
+        "Temperatura": "30 - 90 °C",
+        "Incluye": "3 Estantes, 2 Puertas"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/CHDC-44.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/cook-rite/vitrina-caliente-sobre-mostrador-2/",
+      "localImage": "/productos/vitrina-caliente-sobre-mostrador-2.webp"
+    },
+    {
+      "id": "freidora-automatica-a-gas",
+      "slug": "freidora-automatica-a-gas",
+      "name": "FREIDORA AUTOMÁTICA A GAS",
+      "division": "Alpha",
+      "category": "Freidora",
+      "brand": "Alpha",
+      "specs": {
+        "Capacidad": "32 Lt",
+        "Peso (Kg)": "128",
+        "Fases": "1F",
+        "Voltaje": "110 V",
+        "Temperatura": "100 - 195 °C"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/EFREI00034-scaled.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/alpha/freidora-automatica-a-gas/",
+      "localImage": "/productos/freidora-automatica-a-gas.webp"
+    },
+    {
+      "id": "sarten-basculante-a-gas-120-lt",
+      "slug": "sarten-basculante-a-gas-120-lt",
+      "name": "SARTEN BASCULANTE A GAS 120 LT",
+      "division": "Alpha",
+      "category": "Sartén Basculante",
+      "brand": "Alpha",
+      "specs": {
+        "Capacidad": "120 Lt"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/EICOS00003.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/alpha/sarten-basculante-a-gas-120-lt/",
+      "localImage": "/productos/sarten-basculante-a-gas-120-lt.webp"
+    },
+    {
+      "id": "sarten-basculante-a-gas-150-lt",
+      "slug": "sarten-basculante-a-gas-150-lt",
+      "name": "SARTEN BASCULANTE A GAS 150 Lt",
+      "division": "Alpha",
+      "category": "Sartén Basculante",
+      "brand": "Alpha",
+      "specs": {
+        "Capacidad": "150 Lt"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/EICOS00014.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/alpha/sarten-basculante-a-gas-150-lt/",
+      "localImage": "/productos/sarten-basculante-a-gas-150-lt.webp"
+    },
+    {
+      "id": "sarten-basculante-a-gas-200-lt",
+      "slug": "sarten-basculante-a-gas-200-lt",
+      "name": "SARTEN BASCULANTE A GAS 200 LT",
+      "division": "Alpha",
+      "category": "Sartén Basculante",
+      "brand": "Alpha",
+      "specs": {
+        "Capacidad": "200 Lt"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/EICOS00015.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/alpha/sarten-basculante-a-gas-200-lt/",
+      "localImage": "/productos/sarten-basculante-a-gas-200-lt.webp"
+    },
+    {
+      "id": "marmita-calentamiento-directo-500-lt",
+      "slug": "marmita-calentamiento-directo-500-lt",
+      "name": "MARMITA CALENTAMIENTO DIRECTO 500 LT",
+      "division": "Alpha",
+      "category": "Marmita",
+      "brand": "Alpha",
+      "specs": {
+        "Capacidad": "500 Lt"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/EICOS00008.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/alpha/marmita-calentamiento-directo-500-lt/",
+      "localImage": "/productos/marmita-calentamiento-directo-500-lt.webp"
+    },
+    {
+      "id": "horno-de-microondas",
+      "slug": "horno-de-microondas",
+      "name": "HORNO DE MICROONDAS",
+      "division": "Alpha",
+      "category": "Microondas",
+      "brand": "Alpha",
+      "specs": {
+        "Peso (Kg)": "Cámara 0.33 x 0.33 x 0.20 m",
+        "Fases": "1F",
+        "Consumo": "1 kW/8 A",
+        "Voltaje": "120 V",
+        "Potencia": "1 kW/1.3 Hp",
+        "Amperaje": "8 A"
+      },
+      "images": [
+        "https://grupoalpha.com/wp-content/uploads/2026/07/panaderia.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/gastronoimia.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/frio.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/07/bebidas.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/03/EMICRO00010.png",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00108-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00101-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00106-300x300.webp",
+        "https://grupoalpha.com/wp-content/uploads/2026/08/EHELA00105-300x300.webp"
+      ],
+      "sourceUrl": "https://grupoalpha.com/tienda/alpha/horno-de-microondas/",
+      "localImage": "/productos/horno-de-microondas.webp"
+    }
+  ]
+}

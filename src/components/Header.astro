@@ -1,0 +1,83 @@
+---
+const links = [
+  { href: "/", label: "Inicio" },
+  { href: "/productos", label: "Productos" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/contacto", label: "Contacto" },
+];
+---
+
+<header class="sticky top-0 z-40 border-b border-linea bg-papel/90 backdrop-blur">
+  <div class="container-x flex h-16 items-center justify-between gap-4">
+    <a href="/" class="flex items-center gap-2.5" aria-label="Grupo Alpha — inicio">
+      <span
+        class="grid size-9 place-items-center bg-tinta font-display text-lg font-bold text-papel"
+      >
+        α
+      </span>
+      <span class="leading-none">
+        <span class="block font-display text-lg font-semibold">Grupo Alpha</span>
+        <span class="eyebrow block !text-[0.6rem]">Gastronomía</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Principal">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class="text-sm font-medium text-tinta-2 transition-colors hover:text-cobre"
+          >
+            {l.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a
+        href="/portal"
+        class="hidden px-3 py-2 text-sm font-medium text-tinta-2 transition-colors hover:text-cobre sm:block"
+        title="Portal de vendedores"
+      >
+        Portal ventas
+      </a>
+      <a href="/agenda-una-demo" class="btn btn-primary !px-4 !py-2 text-sm">
+        Agenda una demo
+      </a>
+      <button
+        id="menu-btn"
+        class="grid size-9 place-items-center md:hidden"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" hidden class="border-t border-linea bg-papel md:hidden">
+    <nav class="container-x flex flex-col py-2" aria-label="Menú móvil">
+      {
+        [...links, { href: "/portal", label: "Portal ventas" }].map((l) => (
+          <a href={l.href} class="py-3 text-sm font-medium text-tinta-2">
+            {l.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn?.addEventListener("click", () => {
+    const open = menu?.hasAttribute("hidden");
+    menu?.toggleAttribute("hidden", !open);
+    btn.setAttribute("aria-expanded", String(!!open));
+  });
+</script>

@@ -1,0 +1,21 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import QuoteView from "../react/QuoteView";
+---
+
+<SiteLayout
+  title="Solicitar cotización"
+  description="Arma tu cotización de equipos profesionales de cocina con descuentos por volumen. Respuesta en menos de 24 horas."
+>
+  <div class="border-b border-linea bg-papel-2/60">
+    <div class="container-x py-10">
+      <p class="eyebrow">Cotización en línea</p>
+      <h1 class="mt-2 font-display text-4xl font-semibold">Tu cotización</h1>
+      <p class="mt-2 max-w-xl text-tinta-2">
+        Revisa cantidades, aplica descuentos por volumen y envía tu solicitud.
+        Un asesor te contactará con la propuesta formal.
+      </p>
+    </div>
+  </div>
+  <QuoteView client:load />
+</SiteLayout>

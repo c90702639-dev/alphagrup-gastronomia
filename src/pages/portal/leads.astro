@@ -1,0 +1,24 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PortalNav from "../../components/PortalNav.astro";
+import LeadsInbox from "../../react/LeadsInbox";
+import { isAuthed } from "../../lib/ai/auth";
+
+export const prerender = false;
+if (!isAuthed(Astro.cookies)) return Astro.redirect("/portal");
+---
+
+<SiteLayout title="Leads — Portal de ventas" description="Bandeja de leads y cotizaciones recibidas.">
+  <PortalNav active="leads" subtitle="Bandeja de leads" />
+  <section class="container-x py-8">
+    <div class="flex items-end justify-between">
+      <div>
+        <p class="eyebrow">Ventas</p>
+        <h1 class="mt-1 font-display text-3xl font-semibold">Leads</h1>
+      </div>
+    </div>
+    <div class="mt-6">
+      <LeadsInbox client:only="react" />
+    </div>
+  </section>
+</SiteLayout>

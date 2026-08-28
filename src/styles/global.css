@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/fraunces";
+
+@theme {
+  /* ── Precision Industrial × Warm Craft ─────────────────── */
+  --color-papel: #faf7f2;
+  --color-papel-2: #f3ede4;
+  --color-tinta: #1c1917;
+  --color-tinta-2: #44403c;
+  --color-tinta-3: #78716c;
+
+  --color-cobre: #b4642d;
+  --color-cobre-oscuro: #8f4c1e;
+  --color-cobre-claro: #e8c9ae;
+  --color-terracota: #c4562f;
+
+  --color-acero: #e7e0d8;
+  --color-acero-2: #d6cdc1;
+  --color-linea: #ddd4c8;
+
+  --color-exito: #3d6b45;
+  --color-alerta: #b23a2f;
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces Variable", ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-cobre);
+  color: white;
+}
+
+/* Engineering-grade hairline utility */
+.rule {
+  border-color: var(--color-linea);
+}
+
+.container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .container-x {
+    padding-inline: 2rem;
+  }
+}
+
+/* Spec table — engineering sheet look */
+.spec-sheet {
+  border-collapse: collapse;
+  width: 100%;
+}
+.spec-sheet td,
+.spec-sheet th {
+  border-bottom: 1px solid var(--color-linea);
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+.spec-sheet th {
+  color: var(--color-tinta-3);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  width: 38%;
+}
+.spec-sheet tr:hover td,
+.spec-sheet tr:hover th {
+  background: var(--color-papel-2);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.925rem;
+  padding: 0.7rem 1.35rem;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: var(--color-cobre);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-cobre-oscuro);
+}
+.btn-outline {
+  border: 1px solid var(--color-tinta);
+  color: var(--color-tinta);
+  background: transparent;
+}
+.btn-outline:hover {
+  background: var(--color-tinta);
+  color: var(--color-papel);
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border: 1px solid var(--color-linea);
+  transition:
+    box-shadow 0.2s ease,
+    translate 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 10px 30px -12px rgb(28 25 23 / 0.18);
+  translate: 0 -2px;
+}
+
+/* Eyebrow label */
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-cobre);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+
+/* Focus visibility */
+:focus-visible {
+  outline: 2px solid var(--color-cobre);
+  outline-offset: 2px;
+}

@@ -1,0 +1,176 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PortalNav from "../../components/PortalNav.astro";
+import { isAuthed } from "../../lib/ai/auth";
+import { kbStats } from "../../lib/ai/retrieval";
+
+export const prerender = false;
+if (!isAuthed(Astro.cookies)) return Astro.redirect("/portal");
+
+const stats = await kbStats();
+---
+
+<SiteLayout title="Documentos — Portal de ventas" description="Biblioteca técnica indexada por la IA.">
+  <PortalNav active="documentos" subtitle="Biblioteca técnica de la IA" />
+
+  <section class="container-x grid gap-8 py-8 lg:grid-cols-[1fr_1.3fr]">
+    {/* Estado + instrucciones */}
+    <div class="space-y-6">
+      <div class="border border-linea bg-white p-7">
+        <h2 class="font-display text-xl font-semibold">Estado del índice</h2>
+        <dl class="mt-5 space-y-3 text-sm">
+          <div class="flex justify-between border-b border-linea pb-3">
+            <dt class="text-tinta-3">Fragmentos indexados</dt><dd class="font-semibold">{stats.chunks}</dd>
+          </div>
+          <div class="flex justify-between border-b border-linea pb-3">
+            <dt class="text-tinta-3">Fuentes</dt><dd class="font-semibold">{stats.sources}</dd>
+          </div>
+          <div class="flex justify-between border-b border-linea pb-3">
+            <dt class="text-tinta-3">Modelo embeddings</dt><dd class="font-semibold">MiniLM-L6 · local · gratis</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-tinta-3">Base catálogo</dt><dd class="font-semibold">{new Date(stats.generatedAt).toLocaleDateString("es-MX")}</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="border border-linea bg-papel-2/50 p-7 text-sm leading-relaxed text-tinta-2">
+        <h3 class="font-display text-lg font-semibold text-tinta">¿Qué archivos subir?</h3>
+        <ul class="mt-3 space-y-2">
+          <li>📄 Fichas técnicas del fabricante (PDF)</li>
+          <li>📘 Manuales de instalación y operación</li>
+          <li>📐 Tablas de capacidades y dimensiones</li>
+        </ul>
+        <p class="mt-4 text-xs text-tinta-3">
+          La IA responderá citando documento y página exacta. Máx. recomendado: 100 páginas por archivo.
+        </p>
+      </div>
+    </div>
+
+    {/* Zona de carga + lista */}
+    <div>
+      <div
+        id="dropzone"
+        class="grid cursor-pointer place-items-center border-2 border-dashed border-acero-2 bg-white p-12 text-center transition-colors hover:border-cobre hover:bg-papel-2/40"
+        role="button"
+        tabindex="0"
+        aria-label="Subir fichas técnicas PDF"
+      >
+        <input id="file-input" type="file" accept=".pdf" multiple class="hidden" />
+        <div>
+          <span class="text-4xl">📄</span>
+          <p class="mt-3 font-display text-lg font-semibold">Arrastra tus PDF aquí</p>
+          <p class="mt-1 text-sm text-tinta-3">o haz clic para seleccionar · varios archivos permitidos</p>
+        </div>
+      </div>
+
+      <div id="upload-status" hidden class="mt-4 border border-linea bg-white p-4 text-sm"></div>
+
+      <div class="mt-8 flex items-center justify-between">
+        <h2 class="font-display text-xl font-semibold">Documentos subidos</h2>
+        <button id="btn-refresh-docs" class="text-xs font-medium text-cobre hover:underline">Actualizar</button>
+      </div>
+      <ul id="docs-list" class="mt-3 divide-y divide-linea border border-linea bg-white">
+        <li class="px-5 py-6 text-center text-sm text-tinta-3">Cargando…</li>
+      </ul>
+
+      <p class="mt-4 text-xs leading-relaxed text-tinta-3">
+        También puedes copiar PDFs a la carpeta <code class="bg-papel-2 px-1.5 py-0.5">docs/</code> y ejecutar
+        <code class="bg-papel-2 px-1.5 py-0.5">node scripts/ingest-docs.mjs</code> para ingesta masiva.
+      </p>
+    </div>
+  </section>
+</SiteLayout>
+
+<script>
+  const dz = document.getElementById("dropzone")!;
+  const input = document.getElementById("file-input") as HTMLInputElement;
+  const status = document.getElementById("upload-status")!;
+  const listEl = document.getElementById("docs-list")!;
+
+  function showStatus(html: string) {
+    status.innerHTML = html;
+    status.removeAttribute("hidden");
+  }
+
+  async function loadDocs() {
+    const res = await fetch("/api/portal/docs");
+    if (!res.ok) return;
+    const docs = await res.json();
+    listEl.innerHTML =
+      docs.length === 0
+        ? `<li class="px-5 py-8 text-center text-sm text-tinta-3">Sin PDFs subidos aún — el asistente ya conoce el catálogo completo.</li>`
+        : docs
+            .map(
+              (d: any) => `
+      <li class="flex items-center gap-4 px-5 py-3.5 text-sm">
+        <span>📄</span>
+        <div class="min-w-0 flex-1">
+          <p class="truncate font-medium">${d.name}</p>
+          <p class="text-xs text-tinta-3">${d.chunks} fragmentos · ${(d.chars / 1000).toFixed(0)}k caracteres · ${new Date(d.addedAt).toLocaleString("es-MX")}</p>
+        </div>
+        <button data-del="${d.id}" class="text-xs font-medium text-alerta hover:underline">Eliminar</button>
+      </li>`
+            )
+            .join("");
+
+    listEl.querySelectorAll("[data-del]").forEach((btn) =>
+      btn.addEventListener("click", async () => {
+        if (!confirm("¿Eliminar este documento del índice?")) return;
+        const r = await fetch(`/api/portal/docs?id=${(btn as HTMLElement).dataset.del}`, { method: "DELETE" });
+        if (r.ok) loadDocs();
+      })
+    );
+  }
+
+  async function upload(files: FileList | File[]) {
+    const arr = [...files].filter((f) => f.name.toLowerCase().endsWith(".pdf"));
+    if (!arr.length) {
+      showStatus(`<p class="text-alerta">Solo se aceptan PDF.</p>`);
+      return;
+    }
+    for (const f of arr) {
+      showStatus(`<p class="animate-pulse">Procesando <strong>${f.name}</strong>… (extrayendo texto, generando embeddings)</p>`);
+      const fd = new FormData();
+      fd.append("file", f);
+      try {
+        const res = await fetch("/api/portal/docs", { method: "POST", body: fd });
+        const j = await res.json();
+        if (!res.ok || j.error) {
+          showStatus(`<p class="text-alerta">✗ ${f.name}: ${j.error || "error"}</p>`);
+          continue;
+        }
+        showStatus(`
+          <p class="font-semibold text-exito">✓ ${f.name} indexado</p>
+          <p class="mt-1 text-xs text-tinta-3">${j.pages} páginas → ${j.chunks} fragmentos${
+            j.embedFails ? ` · ${j.embedFails} sin embedding (búsqueda léxica)` : ""
+          }. Ya puedes preguntarle al asistente sobre este equipo.</p>`);
+        loadDocs();
+      } catch (e) {
+        showStatus(`<p class="text-alerta">✗ ${(e as Error).message}</p>`);
+      }
+    }
+  }
+
+  dz.addEventListener("click", () => input.click());
+  dz.addEventListener("keydown", (e) => e.key === "Enter" && input.click());
+  input.addEventListener("change", () => input.files && upload(input.files));
+  ["dragover", "dragenter"].forEach((ev) =>
+    dz.addEventListener(ev, (e) => {
+      e.preventDefault();
+      dz.classList.add("border-cobe", "border-cobre", "bg-papel-2/40");
+    })
+  );
+  ["dragleave", "drop"].forEach((ev) =>
+    dz.addEventListener(ev, (e) => {
+      e.preventDefault();
+      dz.classList.remove("bg-papel-2/40");
+    })
+  );
+  dz.addEventListener("drop", (e) => {
+    if (e.dataTransfer?.files.length) upload(e.dataTransfer.files);
+  });
+
+  document.getElementById("btn-refresh-docs")!.addEventListener("click", loadDocs);
+  loadDocs();
+</script>

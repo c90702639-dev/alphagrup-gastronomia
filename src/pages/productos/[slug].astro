@@ -1,0 +1,162 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import AddToQuote from "../../react/AddToQuote";
+import { products, getBySlug, related, priceFor, finalPrice, formatMXN } from "../../lib/products";
+
+export function getStaticPaths() {
+  return products.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const p = getBySlug(slug ?? "");
+if (!p) return Astro.redirect("/productos");
+
+const { base, discountPct } = priceFor(p);
+const final = finalPrice(p);
+const specs = Object.entries(p.specs);
+
+// Volume tiers
+const tiers = [
+  { min: 1, max: 4, pct: 0 },
+  { min: 5, max: 9, pct: Math.min(discountPct + 3, 20) },
+  { min: 10, max: 24, pct: Math.min(discountPct + 6, 25) },
+];
+---
+
+<SiteLayout title={p.name} description={`${p.name} — ${p.brand}. ${Object.values(p.specs).slice(0, 3).join(", ")}. Cotiza en línea con descuentos por volumen.`}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: p.name,
+    brand: { "@type": "Brand", name: p.brand },
+    category: p.category,
+    image: p.localImage ? [`https://gastronomia.grupoalpha.com${p.localImage}`] : p.images,
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "MXN",
+      price: final,
+      availability: "https://schema.org/InStock",
+      url: `https://gastronomia.grupoalpha.com/productos/${p.slug}/`,
+    },
+  })} />
+  <nav class="container-x pt-6 text-sm text-tinta-3" aria-label="Miga de pan">
+    <a href="/" class="hover:text-cobre">Inicio</a>
+    <span class="mx-2">/</span>
+    <a href="/productos" class="hover:text-cobre">Productos</a>
+    <span class="mx-2">/</span>
+    <a href={`/productos?cat=${encodeURIComponent(p.category)}`} class="hover:text-cobre">{p.category}</a>
+    <span class="mx-2">/</span>
+    <span class="text-tinta-2">{p.name}</span>
+  </nav>
+
+  <section class="container-x grid gap-10 py-8 lg:grid-cols-2 lg:py-12">
+    {/* Imagen */}
+    <div class="relative">
+      {
+        discountPct > 0 && (
+          <span class="absolute top-4 left-4 z-10 bg-terracota px-3 py-1.5 text-sm font-bold text-white">
+            −{discountPct}% hoy
+          </span>
+        )
+      }
+      <div class="border border-linea bg-white p-10">
+        <img
+          src={p.localImage || p.images[0]}
+          alt={p.name}
+          width="600"
+          height="450"
+          fetchpriority="high"
+          class="mx-auto aspect-[4/3] w-full object-contain"
+        />
+      </div>
+    </div>
+
+    {/* Info + precio */}
+    <div>
+      <p class="eyebrow">{p.brand} · {p.category}</p>
+      <h1 class="mt-2 text-3xl font-semibold leading-tight sm:text-4xl">{p.name}</h1>
+
+      <div class="mt-6 flex items-end gap-3">
+        {
+          discountPct > 0 && (
+            <span class="text-xl text-tinta-3 line-through">{formatMXN(base)}</span>
+          )
+        }
+        <span class="font-display text-4xl font-semibold text-cobre">{formatMXN(final)}</span>
+      </div>
+      <p class="mt-1 text-sm text-tinta-3">
+        Precio sugerido MXN. Descuentos adicionales por volumen:
+        <strong class="text-tinta-2">5+ uds −{tiers[1].pct}%</strong> ·
+        <strong class="text-tinta-2">10+ uds −{tiers[2].pct}%</strong>
+      </p>
+
+      <div class="mt-7 max-w-md space-y-3">
+        <AddToQuote
+          client:visible
+          slug={p.slug}
+          name={p.name}
+          final={final}
+          brand={p.brand}
+          category={p.category}
+          localImage={p.localImage}
+        />
+        <div class="grid grid-cols-2 gap-3">
+          <a href={`https://wa.me/5215555332385?text=${encodeURIComponent(`Hola, me interesa: ${p.name} (${p.brand})`)}`} target="_blank" rel="noopener" class="btn btn-outline w-full">
+            WhatsApp
+          </a>
+          <a href="/agenda-una-demo" class="btn btn-outline w-full">Ver demo</a>
+        </div>
+      </div>
+
+      {/* Specs rápidas */}
+      {
+        specs.length > 0 && (
+          <dl class="mt-8 grid grid-cols-2 gap-x-6 border-t border-linea pt-6">
+            {specs.slice(0, 6).map(([k, v]) => (
+              <div class="border-b border-linea py-2.5">
+                <dt class="text-xs font-medium tracking-wide text-tinta-3 uppercase">{k}</dt>
+                <dd class="mt-0.5 text-sm font-medium">{v}</dd>
+              </div>
+            ))}
+          </dl>
+        )
+      }
+    </div>
+  </section>
+
+  {/* Ficha técnica completa */}
+  {
+    specs.length > 0 && (
+      <section class="container-x pb-14">
+        <h2 class="font-display text-2xl font-semibold">Ficha técnica</h2>
+        <div class="mt-5 overflow-x-auto border border-linea bg-white p-2">
+          <table class="spec-sheet !border-0">
+            <tbody>
+              {specs.map(([k, v]) => (
+                <tr>
+                  <th scope="row">{k}</th>
+                  <td>{v}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-xs text-tinta-3">
+          Fuente: ficha oficial del fabricante · Ref. {p.sourceUrl.replace("https://", "")}
+        </p>
+      </section>
+    )
+  }
+
+  {/* Relacionados */}
+  <section class="border-t border-linea bg-papel-2/50">
+    <div class="container-x py-14">
+      <p class="eyebrow">También te puede interesar</p>
+      <h2 class="mt-2 font-display text-2xl font-semibold">Equipos relacionados</h2>
+      <div class="mt-7 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {related(p).map((r) => <ProductCard product={r} />)}
+      </div>
+    </div>
+  </section>
+</SiteLayout>

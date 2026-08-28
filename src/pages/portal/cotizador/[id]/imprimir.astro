@@ -1,0 +1,102 @@
+---
+import { isAuthed } from "../../../../lib/ai/auth";
+import { get } from "../../../../lib/store";
+import type { QuoteRecord } from "../../../../pages/api/portal/quotes";
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+export const prerender = false;
+if (!isAuthed(Astro.cookies)) return Astro.redirect("/portal");
+
+const { id } = Astro.params;
+const quote = await get<QuoteRecord>("quotes", id ?? "");
+if (!quote) return Astro.redirect("/portal/cotizador");
+
+const money = (n: number) =>
+  new Intl.NumberFormat("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 }).format(n);
+---
+
+<BaseLayout title={`Cotización ${quote.folio} — Grupo Alpha`}>
+  <div class="mx-auto max-w-3xl bg-white p-10 print:p-0 print:shadow-none">
+    <header class="flex items-start justify-between border-b-2 border-tinta pb-5">
+      <div>
+        <span class="grid size-11 place-items-center bg-tinta font-display text-xl font-bold text-papel">α</span>
+        <p class="mt-2 font-display text-lg font-semibold">Grupo Alpha</p>
+        <p class="text-xs text-tinta-3">División Gastronomía · grupoalpha.com</p>
+      </div>
+      <div class="text-right">
+        <h1 class="font-display text-2xl font-bold">COTIZACIÓN</h1>
+        <p class="mt-1 text-sm font-semibold text-cobre">{quote.folio}</p>
+        <p class="text-xs text-tinta-3">{new Date(quote.fecha).toLocaleDateString("es-MX", { day: "numeric", month: "long", year: "numeric" })}</p>
+        <p class="mt-1 inline-block bg-papel-2 px-2 py-0.5 text-xs font-bold uppercase">{quote.estado}</p>
+      </div>
+    </header>
+
+    <section class="mt-6 grid grid-cols-2 gap-8">
+      <div>
+        <p class="eyebrow !text-tinta-3">Cliente</p>
+        <p class="mt-1 font-display text-lg font-semibold">{quote.cliente}</p>
+        {quote.contacto && <p class="text-sm">{quote.contacto}</p>}
+        {quote.email && <p class="text-sm text-tinta-3">{quote.email}</p>}
+      </div>
+      <div class="text-right">
+        <p class="eyebrow !text-tinta-3">Validez</p>
+        <p class="mt-1 text-sm">15 días naturales</p>
+        <p class="text-sm">Precios en MXN + IVA</p>
+      </div>
+    </section>
+
+    <table class="spec-sheet mt-8 !text-sm">
+      <thead>
+        <tr class="border-b-2 border-tinta !text-[0.7rem] uppercase tracking-wide">
+          <th>Cant.</th><th>Marca</th><th>Descripción</th><th class="!w-20">Desc.</th><th class="text-right !w-28">Importe</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          quote.items.map((it) => (
+            <tr>
+              <td>{it.qty}</td>
+              <td>{it.brand}</td>
+              <td class="font-medium">{it.name}</td>
+              <td>{it.descuento ? `${it.descuento}%` : "—"}</td>
+              <td class="text-right">{money(Math.round(it.qty * it.price * (1 - it.descuento / 100)))}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+
+    <div class="mt-6 flex justify-end">
+      <dl class="w-64 space-y-2 text-sm">
+        <div class="flex justify-between"><dt class="text-tinta-3">Subtotal</dt><dd>{money(quote.subtotal)}</dd></div>
+        {
+          quote.descuentoGlobal > 0 && (
+            <div class="flex justify-between text-exito">
+              <dt>Descuento global ({quote.descuentoGlobal}%)</dt>
+              <dd>−{money(quote.subtotal - Math.round(quote.subtotal * (1 - quote.descuentoGlobal / 100)))}</dd>
+            </div>
+          )
+        }
+        <div class="flex justify-between border-t-2 border-tinta pt-2 font-display text-xl font-bold">
+          <dt>Total</dt><dd class="text-cobre">{money(quote.total)}</dd>
+        </div>
+        <p class="pt-1 text-right text-[0.7rem] text-tinta-3">+ IVA cuando aplique</p>
+      </dl>
+    </div>
+
+    <footer class="mt-10 border-t border-linea pt-4 text-center text-xs leading-relaxed text-tinta-3">
+      Gracias por su confianza. Para aceptar esta cotización responda a este documento o contacte a su asesor.<br />
+      Grupo Alpha · México · Guatemala · Costa Rica · Colombia · Perú · El Salvador · República Dominicana
+    </footer>
+
+    <p class="mt-6 text-center print:hidden">
+      <button onclick="window.print()" class="btn btn-primary px-8 py-3">Imprimir / Guardar PDF</button>
+    </p>
+  </div>
+
+  <style>
+    @media print {
+      body { background: white; }
+    }
+  </style>
+</BaseLayout>

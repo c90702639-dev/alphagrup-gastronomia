@@ -1,0 +1,101 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const slots = [
+  "9:00", "10:00", "11:00", "12:00", "14:00", "15:00", "16:00", "17:00",
+];
+---
+
+<SiteLayout title="Agenda una demo" description="Agenda una demostración de equipos profesionales de cocina con un especialista de Grupo Alpha.">
+  <section class="border-b border-linea bg-papel-2/60">
+    <div class="container-x py-14">
+      <p class="eyebrow">Demo personalizada</p>
+      <h1 class="mt-3 max-w-2xl text-4xl font-semibold leading-tight">
+        Ve los equipos en acción, antes de decidir.
+      </h1>
+      <p class="mt-4 max-w-xl text-tinta-2">
+        Un especialista te mostrará la tecnología, responderá especificaciones
+        técnicas y preparará una propuesta con descuentos para tu operación.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-x grid gap-12 py-16 lg:grid-cols-[1.1fr_1fr]">
+    <form id="demo-form" class="space-y-5">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="block text-sm font-medium">Nombre *
+          <input required name="nombre" class="mt-1.5 w-full border border-linea bg-white px-3.5 py-2.5 focus:border-cobre focus:outline-none" />
+        </label>
+        <label class="block text-sm font-medium">Empresa *
+          <input required name="empresa" class="mt-1.5 w-full border border-linea bg-white px-3.5 py-2.5 focus:border-cobre focus:outline-none" />
+        </label>
+        <label class="block text-sm font-medium">Correo *
+          <input required type="email" name="email" class="mt-1.5 w-full border border-linea bg-white px-3.5 py-2.5 focus:border-cobre focus:outline-none" />
+        </label>
+        <label class="block text-sm font-medium">Teléfono *
+          <input required name="telefono" class="mt-1.5 w-full border border-linea bg-white px-3.5 py-2.5 focus:border-cobre focus:outline-none" />
+        </label>
+      </div>
+
+      <label class="block text-sm font-medium">Modalidad
+        <select name="modalidad" class="mt-1.5 w-full border border-linea bg-white px-3.5 py-2.5 focus:border-cobre focus:outline-none">
+          <option>En showroom</option>
+          <option>En mi cocina (visita)</option>
+          <option>Videollamada</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend class="text-sm font-medium">Elige un horario *</legend>
+        <div class="mt-3 flex flex-wrap gap-2">
+          {
+            slots.map((s, i) => (
+              <label class="cursor-pointer">
+                <input required type="radio" name="horario" value={s} class="peer sr-only" checked={i === 0} />
+                <span class="block border border-linea px-4 py-2 text-sm transition-colors peer-checked:border-cobre peer-checked:bg-cobre peer-checked:text-white hover:bg-papel-2 peer-checked:hover:bg-cobre">
+                  {s}
+                </span>
+              </label>
+            ))
+          }
+        </div>
+      </fieldset>
+
+      <button class="btn btn-primary px-8 py-3">Confirmar demo</button>
+      <p id="demo-ok" hidden class="font-medium text-exito">✓ ¡Listo! Te contactaremos para confirmar tu demo.</p>
+    </form>
+
+    <aside class="h-fit space-y-6">
+      <div class="border border-linea bg-white p-7">
+        <h2 class="font-display text-xl font-semibold">¿Qué incluye?</h2>
+        <ul class="mt-4 space-y-3 text-sm leading-relaxed text-tinta-2">
+          {[
+            "Demonstración con equipos encendidos y alimentos reales",
+            "Análisis de tu menú y volumen de producción",
+            "Propuesta técnica + económica con descuentos",
+            "Opciones de financiamiento y leasing",
+          ].map((t) => (
+            <li class="flex gap-2.5"><span class="mt-1 size-1.5 shrink-0 bg-cobre"></span>{t}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="border border-linea bg-tinta p-7 text-papel">
+        <p class="eyebrow !text-cobre-claro">Respuesta rápida</p>
+        <p class="mt-3 text-sm leading-relaxed text-papel/80">
+          ¿Prefieres resolverlo por chat? Escríbenos por WhatsApp y agenda en minutos.
+        </p>
+        <a href="https://wa.me/5215555332385" target="_blank" rel="noopener" class="btn btn-primary mt-4">WhatsApp</a>
+      </div>
+    </aside>
+  </section>
+</SiteLayout>
+
+<script>
+  document.getElementById("demo-form")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.target as HTMLFormElement));
+    console.log("[demo]", data);
+    (e.target as HTMLFormElement).reset();
+    document.getElementById("demo-ok")?.removeAttribute("hidden");
+  });
+</script>
